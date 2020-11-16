@@ -6,11 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 14:05:02 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 17:27:41 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/16 23:05:42 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strlen(const char *s)
+int		ft_strlen(const char *s)
 {
 	int	i;
 
@@ -18,4 +18,15 @@ int		strlen(const char *s)
 	while (s[i])
 		s[i++];
 	return (i);
+}
+
+/*[TEST]*/
+int		main()
+{
+	char	tab[] = {"123456"};
+	int		a;
+
+	printf("%d [ft: %d, or: %d]\n", (ft_strlen(tab) == strlen(tab)), ft_strlen(tab), strlen(tab));
+	return (0);
+
 }

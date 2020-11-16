@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 16:19:12 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 22:49:16 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 17:32:51 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/16 22:50:58 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
@@ -20,11 +20,10 @@ int	ft_isalpha(int c)
 /*[TEST]*/
 int main()
 {
-	char	tab[] = {'#', ' ', '^', '4', 'g'};
+	char	tab[] = {'e', '3', '2', '4', 'E'};
 	int		a;
 
 	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isalpha((int)tab[a]) == isalpha((int)tab[a])), ft_isalpha((int)tab[a]), isalpha((int)tab[a]));
-	
+		printf("%d [ft: %d, or: %d]\n", (ft_isdigit((int)tab[a]) == isdigit((int)tab[a])), ft_isdigit((int)tab[a]), isdigit((int)tab[a]));
 	return (0);
 }

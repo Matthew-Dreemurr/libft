@@ -7,10 +7,10 @@ Fonctions de la libc.
 - [ ] atoi
 - [ ] bzero
 - [ ] calloc
-- [ ] isalnum		**WIP**
+- [x] isalnum
 - [x] isalpha
-- [ ] isascii		**WIP**
-- [ ] isdigit		**WIP**
+- [ ] isascii
+- [x] isdigit
 - [ ] isprint
 - [ ] memccpy
 - [ ] memchr
