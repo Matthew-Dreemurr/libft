@@ -42,3 +42,5 @@ Fonctions supplémentaires.
 - [ ] ft_strmapi
 - [ ] ft_strtrim
 - [ ] ft_substr
+
+test
