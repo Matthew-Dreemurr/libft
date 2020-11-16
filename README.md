@@ -8,7 +8,7 @@ Fonctions de la libc.
 - [ ] bzero
 - [ ] calloc
 - [ ] isalnum
-- [ ] isalpha
+- [x] isalpha
 - [ ] isascii
 - [ ] isdigit
 - [ ] isprint
@@ -26,7 +26,7 @@ Fonctions de la libc.
 - [ ] strncmp
 - [ ] strnstr
 - [ ] strrchr
-- [ ] tolower
+- [x] tolower
 - [ ] toupper
 
 ## Part 2

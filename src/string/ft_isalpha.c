@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 14:05:02 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 17:27:41 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 16:19:12 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/16 17:27:29 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strlen(const char *s)
+int	isalpha(int c)
 {
-	int	i;
+	if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
+		return (0);
+	return (1);
+}
 
-	i = 0;
-	while (s[i])
-		s[i++];
-	return (i);
+/*[TEST]*/
+int main()
+{
+	char	tab[] = {'#', 'b', '^', '4', 'E'};
+	int		a;
+
+	for (a = 0; a < 5; a++)
+		printf("%d \n", isalpha((int)tab[a]));
+	
+	return (0);
 }

@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 14:05:02 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 17:27:41 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 15:52:34 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/16 17:27:11 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strlen(const char *s)
+int	tolower(int c)
 {
-	int	i;
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}
 
-	i = 0;
-	while (s[i])
-		s[i++];
-	return (i);
+/*[TEST]*/
+int main()
+{
+	char	tab[] = {"adsd 2@@## rWEF W FWf fwffwFW WF  WfwfwFWF"};
+	int		a;
+
+	for (a = 0; a < 43; a++)
+		printf("%c \n", tolower((int)tab[a]));
+	
+	return (0);
 }
