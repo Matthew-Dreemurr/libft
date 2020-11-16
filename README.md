@@ -22,7 +22,7 @@ Fonctions de la libc.
 - [ ] strdup
 - [ ] strlcat
 - [ ] strlcpy
-- [ ] strlen
+- [x] strlen
 - [ ] strncmp
 - [ ] strnstr
 - [ ] strrchr
