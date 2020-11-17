@@ -4,7 +4,7 @@ First project of School 19.
 ## Part 1
 Fonctions de la libc.
 
-- [ ] atoi
+- [ ] atoi			**WIP**
 - [ ] bzero
 - [ ] calloc
 - [x] isalnum

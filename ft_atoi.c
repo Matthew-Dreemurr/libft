@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:36:36 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/17 14:23:42 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/17 15:33:32 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	ft_atoi(const char *c)
 			break;
 		if (c[i] == '-')
 			neg *= -1;
-		if (ft_isdigit)
+		if (ft_isdigit((int)c[i]))
 		{
 			ret *= 10;
-			ret += (int)c[1] - '0';
+			ret += (int)c[i] - '0';
 		}
 		i++;
 	}
