@@ -9,7 +9,7 @@ Fonctions de la libc.
 - [ ] calloc
 - [x] isalnum
 - [x] isalpha
-- [ ] isascii
+- [x] isascii
 - [x] isdigit
 - [ ] isprint
 - [ ] memccpy

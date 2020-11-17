@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 15:52:34 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/17 11:11:21 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/17 10:39:56 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 11:01:43 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int ft_isascii(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
 
 /*[TEST]*/
 int main()
 {
-	char	tab[] = {"adsd 2@@## rWEF W FWf fwffwFW WF  WfwfwFWF"};
 	int		a;
 
-	for (a = 0; a < 43; a++)
-		printf("%c \n", tolower((int)tab[a]));
-	
+	for (a = 0; a < 130; a++)
+		printf("%d [ft: %d, or: %d]\n", (ft_isascii(a) == isascii(a), ft_isascii(a), isascii(a)));
 	return (0);
 }
