@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 17:32:51 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 22:50:58 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 15:52:34 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 13:26:45 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	tolower(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
 
-/*[TEST]*/
+/*[TEST]
 int main()
 {
-	char	tab[] = {'e', '3', '2', '4', 'E'};
+	char	tab[] = {"adsd 2@@## rWEF W FWf fwffwFW WF  WfwfwFWF"};
 	int		a;
 
-	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isdigit((int)tab[a]) == isdigit((int)tab[a])), ft_isdigit((int)tab[a]), isdigit((int)tab[a]));
+	for (a = 0; a < 43; a++)
+		printf("%c \n", tolower((int)tab[a]));
+	
 	return (0);
 }
+*/

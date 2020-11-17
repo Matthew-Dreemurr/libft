@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 10:39:56 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/17 11:01:43 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 23:02:16 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 13:27:01 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int ft_isalnum(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 /*[TEST]*/
-int main()
+int		main()
 {
+	char	tab[] = {'!', '3', '2', '4', 'E'};
 	int		a;
 
-	for (a = 0; a < 130; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isascii(a) == isascii(a), ft_isascii(a), isascii(a)));
+	for (a = 0; a < 5; a++)
+		printf("%d [ft: %d, or: %d]\n", (ft_isalnum((int)tab[a]) == isalnum((int)tab[a])), ft_isalnum((int)tab[a]), isalnum((int)tab[a]));
 	return (0);
+
 }

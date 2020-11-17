@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 14:05:02 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 23:05:42 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 16:19:12 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 13:26:57 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-		s[i++];
-	return (i);
+int	ft_isalpha(int c)
+{
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-/*[TEST]*/
-int		main()
+/*[TEST]
+int main()
 {
-	char	tab[] = {"123456"};
+	char	tab[] = {'#', 'F', '^', '4', 'g'};
 	int		a;
 
-	printf("%d [ft: %d, or: %d]\n", (ft_strlen(tab) == strlen(tab)), ft_strlen(tab), strlen(tab));
+	for (a = 0; a < 5; a++)
+		printf("%d [ft: %d, or: %d]\n", (ft_isalpha((int)tab[a]) == isalpha((int)tab[a])), ft_isalpha((int)tab[a]), isalpha((int)tab[a]));
+	
 	return (0);
-
-}
+}*/

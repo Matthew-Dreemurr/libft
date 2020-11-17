@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 16:19:12 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 22:49:16 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/17 12:03:28 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 12:09:44 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
-}
+#ifndef libft_h
+# define libft_h
 
-/*[TEST]*/
-int main()
-{
-	char	tab[] = {'#', ' ', '^', '4', 'g'};
-	int		a;
-
-	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isalpha((int)tab[a]) == isalpha((int)tab[a])), ft_isalpha((int)tab[a]), isalpha((int)tab[a]));
-	
-	return (0);
-}
+int	ft_atoi(const char *c);
+int	ft_isalnum(int c);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int c);
+int	ft_strlen(const char *s);
+int	tolower(int c);
+#endif

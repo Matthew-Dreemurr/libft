@@ -11,7 +11,7 @@ Fonctions de la libc.
 - [x] isalpha
 - [x] isascii
 - [x] isdigit
-- [ ] isprint
+- [x] isprint
 - [ ] memccpy
 - [ ] memchr
 - [ ] memcmp

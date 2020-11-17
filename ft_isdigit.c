@@ -1,47 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 23:02:16 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/16 23:07:50 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 17:32:51 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 13:26:53 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*[TEST]*/
-//////////////////////////////////////////////
-int	ft_isalpha(int c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-////////////////////////////////////////
-
-int ft_isalnum(int c)
-{
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
 
-/*[TEST]*/
-int		main()
+/*[TEST]
+int main()
 {
 	char	tab[] = {'e', '3', '2', '4', 'E'};
 	int		a;
 
 	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isalnum((int)tab[a]) == isalnum((int)tab[a])), ft_isalnum((int)tab[a]), isalnum((int)tab[a]));
+		printf("%d [ft: %d, or: %d]\n", (ft_isdigit((int)tab[a]) == isdigit((int)tab[a])), ft_isdigit((int)tab[a]), isdigit((int)tab[a]));
 	return (0);
-
-}
+}*/

@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 15:52:34 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/17 11:11:21 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/16 14:05:02 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/17 13:26:46 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+#include "libft.h"
+
+int		ft_strlen(const char *s)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		s[i++];
+	return (i);
 }
 
-/*[TEST]*/
-int main()
+/*[TEST]
+int		main()
 {
-	char	tab[] = {"adsd 2@@## rWEF W FWf fwffwFW WF  WfwfwFWF"};
+	char	tab[] = {"123456"};
 	int		a;
 
-	for (a = 0; a < 43; a++)
-		printf("%c \n", tolower((int)tab[a]));
-	
+	printf("%d [ft: %d, or: %d]\n", (ft_strlen(tab) == strlen(tab)), ft_strlen(tab), strlen(tab));
 	return (0);
-}
+
+}*/
