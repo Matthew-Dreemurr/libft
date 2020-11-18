@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:24:00 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/18 16:57:11 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/18 17:11:21 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int		i;
-	char	*cdest;
-	char	*csrc;
+	unsigned char	*cdest;
+	unsigned char	*csrc;
 
 	cdest = (char *)dest;
 	csrc = (char *)src;
