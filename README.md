@@ -12,7 +12,7 @@ Fonctions de la libc.
 - [x] isascii
 - [x] isdigit
 - [x] isprint
-- [ ] memccpy			**WIP**
+- [x] memccpy
 - [ ] memchr
 - [ ] memcmp
 - [x] memcpy
