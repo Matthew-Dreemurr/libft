@@ -4,7 +4,7 @@ First project of School 19.
 ## Part 1
 Fonctions de la libc.
 
-- [ ] atoi			**WIP**
+- [x] atoi
 - [ ] bzero
 - [ ] calloc
 - [x] isalnum
@@ -28,6 +28,8 @@ Fonctions de la libc.
 - [ ] strrchr
 - [x] tolower
 - [ ] toupper
+
+- [x] libft.h
 
 ## Part 2
 Fonctions supplémentaires.
