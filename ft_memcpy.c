@@ -6,26 +6,26 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:24:00 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/18 17:11:21 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/18 18:23:17 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
 	unsigned char	*cdest;
 	unsigned char	*csrc;
 
-	cdest = (char *)dest;
-	csrc = (char *)src;
-	i = -1;
-	while (++i < n)
-		cdest[i] = csrc[i];
+	cdest = (unsigned char *)dest;
+	csrc = (unsigned char *)src;
+	while (n--)
+		cdest[n] = csrc[n];
+	return (0);
 }
 
-/*[TEST]
+/*[TEST]*/
 int main()
 {
 	
@@ -45,4 +45,3 @@ int main()
 		
 	return EXIT_SUCCESS;
 }
-*/
