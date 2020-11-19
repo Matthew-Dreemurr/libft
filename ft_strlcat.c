@@ -6,46 +6,45 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 10:58:46 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/19 13:55:07 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/19 17:10:24 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	size_t rep;
+	size_t	i;
+	size_t	len_dst;
 
+	len_dst = ft_strlen(dest);
 	i = 0;
-	j = ft_strlen(dest);
-	rep = ft_strlen(src);
-	if (!size)
-		return (rep);
-	if (size <= j)
-		rep += size;
-	else
-		rep += j;
-	while (src[i] && j < size - 1)
+	while (i < size - 1)
 	{
-		dest[j] = src[i];
+		if (!size)
+			break;
+		dest[i + len_dst] = src[i];
 		i++;
-		j++;
 	}
-	dest[j] = '\0';
-	return (rep);
+	if (size < ft_strlen(dest))
+		dest[i] = '\0';
+	return (len_dst + ft_strlen(src));
 }
 
 int main(void)
 {
-	char dest[20] = "hello";
-	char src[] = "!? test";	
-	
-	ft_strlcat(dest, src, 20);
-	printf("%d\n", ft_strlen(dest));
-	printf("%s", dest);
-	
-   return 0;
+	char test[256] = "\0zxcvzxcvzxcvxzcvzxcv";
+	printf("%d-", ft_strlcat(test, "asdf", 16));
+	printf("%s\n", test);
+	printf("%d-", ft_strlcat(test, "asdf", 6));
+	printf("%s\n", test);
+	printf("%d-", ft_strlcat(test, "asdf", 4));
+	printf("%s\n", test);
+	printf("%d-", ft_strlcat(test, "", 16));
+	printf("%s\n", test);
+	printf("%d-", ft_strlcat(test, "asdf", 0));
+	printf("%s\n", test);
+
+	printf("\n\n4-asdf\n8-asdfa\n8-asdfa\n5-asdfa\n4-asdfa\n");
 }
