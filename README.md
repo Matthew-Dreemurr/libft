@@ -4,32 +4,32 @@ First project of School 19.
 ## Part 1
 Fonctions de la libc.
 
-- [x] atoi
+- [x] atoi			**TO CHECK**
 - [ ] bzero
 - [ ] calloc
-- [x] isalnum
-- [x] isalpha
-- [x] isascii
-- [x] isdigit
-- [x] isprint
-- [x] memccpy
+- [x] isalnum			**TO CLEAN**
+- [x] isalpha			**TO CLEAN**
+- [x] isascii			**TO CLEAN**
+- [x] isdigit			**TO CLEAN**
+- [x] isprint			**TO CLEAN**
+- [x] memccpy			**TO CHECK**
 - [ ] memchr
 - [ ] memcmp
-- [x] memcpy
+- [x] memcpy			**TO CHECK**
 - [ ] memmove
 - [ ] memset
 - [ ] strchr
 - [ ] strdup
-- [ ] strlcat
-- [ ] strlcpy
-- [x] strlen
+- [ ] strlcat			**WIP**
+- [x] strlcpy			**WIP**
+- [x] strlen			**TO CLEAN**
 - [ ] strncmp
 - [ ] strnstr
 - [ ] strrchr
-- [x] tolower
+- [x] tolower			**TO CHECK**
 - [ ] toupper
 
-- [x] libft.h
+- [x] libft.h			**TO CHECK**
 
 ## Part 2
 Fonctions supplémentaires.
