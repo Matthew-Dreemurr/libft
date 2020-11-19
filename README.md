@@ -21,7 +21,7 @@ Fonctions de la libc.
 - [ ] strchr
 - [ ] strdup
 - [ ] strlcat			**WIP**
-- [x] strlcpy			**WIP**
+- [x] strlcpy			**TO CHECK**
 - [x] strlen			**TO CLEAN**
 - [ ] strncmp
 - [ ] strnstr
