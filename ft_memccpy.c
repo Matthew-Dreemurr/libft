@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:37:15 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/18 17:13:33 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/20 16:49:09 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,36 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-		int		i;
-	unsigned char	*cdest;
-	unsigned char	*csrc;
-	unsigned char	find;
-	cdest = (char *)dest;
-	csrc = (char *)src;
-	i = -1;
-	while (++i < n)
+	const unsigned char	*csrc;
+	unsigned char		*cdest;
+	unsigned char		find;
+
+	find = c;
+	cdest = dest;
+	csrc = src;
+	while (n--)
 	{
-		if (cdest[i] == (char)c)
-			break;
-		cdest[i] = csrc[i];
+		if (*csrc == find)
+			return (cdest);
+		*cdest++ = *csrc++;
 	}
+	return (NULL);
 }
 
-/*[TEST]
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-int main () {
-   const char src[50] = "http://www.tutorialspoint.com";
-   char dest[50];
-   strcpy(dest,"Heloooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   memcpy(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
+char* msg = "This is the string: not copied";
+
+int main( void )
+{
+    char buffer[80];
+
+    memset( buffer, '\0', 80 );
+    ft_memccpy( buffer, msg, ':', 80 );
+
+    printf( "%s\n", buffer );
+    
+    return EXIT_SUCCESS;
 }
-*/
