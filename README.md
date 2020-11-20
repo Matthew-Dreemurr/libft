@@ -4,7 +4,7 @@ First project of School 19.
 ## Part 1
 Fonctions de la libc.
 
-- [x] atoi			**TO CHECK**
+- [x] atoi
 - [ ] bzero
 - [ ] calloc
 - [x] isalnum
