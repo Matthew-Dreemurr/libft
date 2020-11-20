@@ -7,29 +7,29 @@ Fonctions de la libc.
 - [x] atoi			**TO CHECK**
 - [ ] bzero
 - [ ] calloc
-- [x] isalnum			**TO CLEAN**
-- [x] isalpha			**TO CLEAN**
-- [x] isascii			**TO CLEAN**
-- [x] isdigit			**TO CLEAN**
-- [x] isprint			**TO CLEAN**
-- [x] memccpy			**TO CHECK**
+- [x] isalnum
+- [x] isalpha
+- [x] isascii
+- [x] isdigit
+- [x] isprint
+- [ ] memccpy			**TO CHECK**
 - [ ] memchr
 - [ ] memcmp
-- [x] memcpy			**TO CHECK**
+- [ ] memcpy			**TO CHECK**
 - [ ] memmove
 - [ ] memset
 - [ ] strchr
 - [ ] strdup
 - [ ] strlcat			**WIP**
-- [x] strlcpy			**TO CHECK**
-- [x] strlen			**TO CLEAN**
+- [ ] strlcpy			**TO CHECK**
+- [x] strlen
 - [ ] strncmp
 - [ ] strnstr
 - [ ] strrchr
-- [x] tolower			**TO CHECK**
+- [ ] tolower			**TO CHECK**
 - [ ] toupper
 
-- [x] libft.h			**TO CHECK**
+- [ ] libft.h			**TO CHECK**
 
 ## Part 2
 Fonctions supplémentaires.
