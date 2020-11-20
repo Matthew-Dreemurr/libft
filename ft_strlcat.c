@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 10:58:46 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/19 17:10:24 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/20 12:00:12 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 		dest[i] = '\0';
 	return (len_dst + ft_strlen(src));
 }
-
+/*
 int main(void)
 {
 	char test[256] = "\0zxcvzxcvzxcvxzcvzxcv";
@@ -47,4 +47,4 @@ int main(void)
 	printf("%s\n", test);
 
 	printf("\n\n4-asdf\n8-asdfa\n8-asdfa\n5-asdfa\n4-asdfa\n");
-}
+}*/
