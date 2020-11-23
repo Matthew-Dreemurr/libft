@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:03:28 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/23 11:25:38 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/23 13:51:17 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+void	*memmove(void *dst, const void *src, size_t len);
 char	*ft_strchr(const char *s, int c);
 int		ft_atoi(const char *c);
 int		ft_isalnum(int c);
