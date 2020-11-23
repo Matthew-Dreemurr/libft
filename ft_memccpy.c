@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:37:15 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/20 16:49:09 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/23 13:38:37 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,18 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	const unsigned char	*csrc;
-	unsigned char		*cdest;
-	unsigned char		find;
+	unsigned char			*s1;
+	const unsigned char		*s2;
 
-	find = c;
-	cdest = dest;
-	csrc = src;
+	s1 = dest;
+	s2 = src;
 	while (n--)
 	{
-		if (*csrc == find)
-			return (cdest);
-		*cdest++ = *csrc++;
+		*s1 = *s2;
+		s1++;
+		if (*s2 == (unsigned char)c)
+			return (s1);
+		s2++;
 	}
 	return (NULL);
-}
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-char* msg = "This is the string: not copied";
-
-int main( void )
-{
-    char buffer[80];
-
-    memset( buffer, '\0', 80 );
-    ft_memccpy( buffer, msg, ':', 80 );
-
-    printf( "%s\n", buffer );
-    
-    return EXIT_SUCCESS;
 }
