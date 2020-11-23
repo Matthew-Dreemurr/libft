@@ -12,22 +12,22 @@ Fonctions de la libc.
 - [x] isascii
 - [x] isdigit
 - [x] isprint
-- [ ] memccpy			**TO CHECK**
+- [ ] memccpy			**WIP**
 - [ ] memchr
 - [ ] memcmp
-- [ ] memcpy			**TO CHECK**
+- [ ] memcpy			**WIP**
 - [ ] memmove
 - [ ] memset
-- [ ] strchr
+- [x] strchr
 - [ ] strdup
 - [ ] strlcat			**WIP**
-- [ ] strlcpy			**TO CHECK**
+- [ ] strlcpy			**WIP**
 - [x] strlen
 - [ ] strncmp
 - [ ] strnstr
 - [ ] strrchr
-- [ ] tolower			**TO CHECK**
-- [ ] toupper
+- [x] tolower
+- [x] toupper
 
 - [ ] libft.h			**TO CHECK**
 
