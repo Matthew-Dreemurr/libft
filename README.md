@@ -16,7 +16,7 @@ Fonctions de la libc.
 - [ ] memchr
 - [ ] memcmp
 - [x] memcpy
-- [ ] memmove
+- [ ] memmove			**WIP**
 - [ ] memset
 - [x] strchr
 - [ ] strdup
