@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:04:19 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/23 14:06:35 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/23 14:13:00 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	
+	unsigned char	*str;
+
+	str = b;
+	while (len--)
+	{
+		*str++ = (unsigned char)c;
+	}
+	return (b);
 }
