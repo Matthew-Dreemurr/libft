@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isprint.c                                     :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 17:22:33 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/24 17:33:52 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/24 17:32:38 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/24 17:34:56 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include "test.h"
+#ifndef TEST_H
+# define TEST_H
 
-int main()
-{
-	int		a;
-	for (a = 0; a < 130; a++)
-		printf("a: %d [ft: %d, or: %d]\n", a, ft_isprint(a), isprint(a));
-	return (0);
-}
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+#include <ctype.h>
+#endif
