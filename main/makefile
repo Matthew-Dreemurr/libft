@@ -8,4 +8,10 @@ isalnum:
 	gcc main_isalnum.c ../libft.a test.h
 isalpha:
 	gcc main_isalpha.c ../libft.a test.h
+isascii:
+	gcc main_isascii.c ../libft.a test.h
+isdigit:
+	gcc main_isdigit.c ../libft.a test.h
+isprint:
+	gcc main_isprint.c ../libft.a test.h
 
