@@ -18,4 +18,10 @@ memcpy:
 	gcc main_memcpy.c ../libft.a test.h
 memccpy:
 	gcc main_memccpy.c ../libft.a test.h
+memmove:
+	gcc main_memmove.c ../libft.a test.h
+memset:
+	gcc main_memset.c ../libft.a test.h
+strchr:
+	gcc main_strchr.c ../libft.a test.h
 
