@@ -1,27 +1,33 @@
+GG = -Wall -Wextra -Werror
+
 all:
 	find ../*.c | sed 's/ft_*/main_/' | sed 's/..\///' | xargs -n 1 touch
 re:
 	rm a.out
 atoi:
-	gcc main_atoi.c ../libft.a test.h
+	gcc ${GG} main_atoi.c ../libft.a test.h
 isalnum:
-	gcc main_isalnum.c ../libft.a test.h
+	gcc ${GG} main_isalnum.c ../libft.a test.h
 isalpha:
-	gcc main_isalpha.c ../libft.a test.h
+	gcc ${GG} main_isalpha.c ../libft.a test.h
 isascii:
-	gcc main_isascii.c ../libft.a test.h
+	gcc ${GG} main_isascii.c ../libft.a test.h
 isdigit:
-	gcc main_isdigit.c ../libft.a test.h
+	gcc ${GG} main_isdigit.c ../libft.a test.h
 isprint:
-	gcc main_isprint.c ../libft.a test.h
+	gcc ${GG} main_isprint.c ../libft.a test.h
 memcpy:
-	gcc main_memcpy.c ../libft.a test.h
+	gcc ${GG} main_memcpy.c ../libft.a test.h
 memccpy:
-	gcc main_memccpy.c ../libft.a test.h
+	gcc ${GG} main_memccpy.c ../libft.a test.h
 memmove:
-	gcc main_memmove.c ../libft.a test.h
+	gcc ${GG} main_memmove.c ../libft.a test.h
 memset:
-	gcc main_memset.c ../libft.a test.h
+	gcc ${GG} main_memset.c ../libft.a test.h
 strchr:
-	gcc main_strchr.c ../libft.a test.h
+	gcc ${GG} main_strchr.c ../libft.a test.h
+strlen:
+	gcc ${GG} main_strlen.c ../libft.a test.h
+strncmp:
+	gcc ${GG} main_strncmp.c ../libft.a test.h
 
