@@ -6,21 +6,22 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:21:34 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/24 17:35:33 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/25 12:22:35 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "test.h"
 
-int		main()
+int		main(int ac, char **ag)
 {
-	char	tab[] = {'!', '3', '2', '4', 'E'};
-	int		a;
-
-	printf("isalnum");
-	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isalnum((int)tab[a]) == isalnum((int)tab[a])), ft_isalnum((int)tab[a]), isalnum((int)tab[a]));
+	int i;
+	i = 1;
+	
+	if (ac < 2)
+		return (printf("[isalnum] Error"));
+	for (i = 1; i < ac; i++)
+		printf("[%c]\nok ? [%d]\nor: [%d] ft: [%d]\n\n",ag[i][0], (ft_isalnum((int)ag[i][0]) == isalnum((int)ag[i][0])), ft_isalnum((int)ag[i][0]), isalnum((int)ag[i][0]));
 	return (0);
 
 }
