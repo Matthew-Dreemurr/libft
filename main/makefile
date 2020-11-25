@@ -14,4 +14,8 @@ isdigit:
 	gcc main_isdigit.c ../libft.a test.h
 isprint:
 	gcc main_isprint.c ../libft.a test.h
+memcpy:
+	gcc main_memcpy.c ../libft.a test.h
+memccpy:
+	gcc main_memccpy.c ../libft.a test.h
 
