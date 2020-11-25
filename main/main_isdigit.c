@@ -6,20 +6,22 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:22:16 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/24 17:36:19 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/25 12:36:09 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "test.h"
 
-int main()
+int		main(int ac, char **ag)
 {
-	char	tab[] = {'e', '3', '2', '4', 'E'};
-	int		a;
-
-	printf("isdigit");
-	for (a = 0; a < 5; a++)
-		printf("%d [ft: %d, or: %d]\n", (ft_isdigit((int)tab[a]) == isdigit((int)tab[a])), ft_isdigit((int)tab[a]), isdigit((int)tab[a]));
+	int i;
+	i = 1;
+	
+	if (ac < 2)
+		return (printf("[isdigit] Error"));
+	for (i = 1; i < ac; i++)
+		printf("[%c]\nok ? [%d]\nor: [%d] ft: [%d]\n\n",ag[i][0], (ft_isdigit((int)ag[i][0]) == isdigit((int)ag[i][0])), ft_isdigit((int)ag[i][0]), isdigit((int)ag[i][0]));
 	return (0);
+
 }
