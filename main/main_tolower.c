@@ -6,17 +6,22 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:26:22 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/24 17:33:54 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/26 12:31:31 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "test.h"
 
-int		main()
+int		main(int ac, char **ag)
 {
-	char	tab[] = {"123456"};
-	int		a;
-	printf("%d [ft: %d, or: %d]\n", (ft_strlen(tab) == strlen(tab)), ft_strlen(tab), strlen(tab));
+	int i;
+	i = 1;
+	
+	if (ac < 2)
+		return (printf("[tolower] Error"));
+	for (i = 1; i < ac; i++)
+		printf("[%c]\nok ? [%d]\nor: [%c] ft: [%c]\n\n",ag[i][0], (ft_tolower((int)ag[i][0]) == tolower((int)ag[i][0])), ft_tolower((int)ag[i][0]), tolower((int)ag[i][0]));
 	return (0);
+
 }
