@@ -4,36 +4,38 @@ First project of School 19.
 ## Part 1
 Fonctions de la libc.
 
-- [x] atoi
-- [ ] bzero
-- [ ] calloc
-- [x] isalnum
-- [x] isalpha
-- [x] isascii
-- [x] isdigit
-- [x] isprint
-- [x] memccpy
-- [ ] memchr
-- [ ] memcmp
-- [x] memcpy
-- [ ] memmove			**WIP**
-- [ ] memset
-- [x] strchr
-- [ ] strdup
-- [ ] strlcat			**WIP**
-- [ ] strlcpy			**WIP**
-- [x] strlen
-- [x] strncmp
-- [ ] strnstr
-- [ ] strrchr
-- [x] tolower
-- [x] toupper
+### Check before push
+- [ ] atoi
+- [	] bzero
+- [	] calloc
+- [	] isalnum
+- [	] isalpha
+- [	] isascii
+- [	] isdigit
+- [	] isprint
+- [	] memccpy
+- [	] memchr
+- [	] memcmp
+- [	] memcpy
+- [	] memmove
+- [	] memset
+- [	] strchr
+- [	] strdup
+- [	] strlcat
+- [	] strlcpy
+- [	] strlen
+- [	] strncmp
+- [	] strnstr
+- [	] strrchr
+- [	] tolower
+- [	] toupper
 
-- [ ] libft.h			**TO CHECK**
+- [ ] libft.h
 
 ## Part 2
 Fonctions supplémentaires.
 
+### Check before push
 - [ ] ft_itoa
 - [ ] ft_putchar_fd
 - [ ] ft_putendl_fd
