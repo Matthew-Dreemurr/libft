@@ -30,4 +30,8 @@ strlen:
 	gcc ${GG} main_strlen.c ../libft.a test.h
 strncmp:
 	gcc ${GG} main_strncmp.c ../libft.a test.h
+tolower:
+	gcc ${GG} main_tolower.c ../libft.a test.h
+toupper:
+	gcc ${GG} main_toupper.c ../libft.a test.h
 
