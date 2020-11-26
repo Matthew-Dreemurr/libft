@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 10:58:46 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/26 15:30:11 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/26 16:28:44 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/26 16:48:27 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	compt;
-	size_t	i;
-	size_t	j;
+	char	*cpy_c;
 
-	i = 0;
-	while (dst[i])
-		i++;
-	compt = 0;
-	while (src[compt])
+	cpy_c = (char *)s;
+	cpy_c += ft_strlen(s);
+	while (cpy_c != s - 1)
 	{
-		compt++;
+		if (*cpy_c == (char)c)
+			return (cpy_c);
+		cpy_c--;
 	}
-	if (dstsize <= compt)
-		compt += dstsize;
-	else
-		compt += i;
-	j = 0;
-	while (src[j] && i + 1 < dstsize)
-	{
-		dst[i] = src[j];
-		j++;
-		i++;
-	}
-	dst[i] = 0;
-	return (compt);
+	return (c ? NULL : cpy_c);
 }

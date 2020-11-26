@@ -6,38 +6,26 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 14:38:34 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/20 12:01:26 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:56:29 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy( char *dst, const char *src, size_t siz)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	count;
 
 	i = 0;
-	while (i < siz - 1)
+	count = ft_strlen(src);
+	if (!dstsize)
+		return (count);
+	while (src[i] != '\0' && i < (dstsize - 1))
 	{
-		if (!siz)
-			break;
 		dst[i] = src[i];
 		i++;
 	}
-	if (siz)
-		dst[i] = '\0';
-	return (ft_strlen(src));
+	dst[i] = '\0';
+	return (count);
 }
-/* replace size_t by unsigned int
-int		main()
-{
-char test[256] = "\0zxcvzxcvzxcvxzcvzxcv";
-printf("%d-", ft_strlcpy(test, "asdf", 16));
-printf("%s\n", test);
-printf("%d-", ft_strlcpy(test, "uiop", 0));
-printf("%s\n", test);
-printf("%d-", ft_strlcpy(test, "qwerty", 4));
-printf("%s\n", test);
-printf("%d-", ft_strlcpy(test, "", 4));
-printf("%s\n", test);
-}*/
