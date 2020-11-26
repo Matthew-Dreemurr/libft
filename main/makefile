@@ -34,4 +34,10 @@ tolower:
 	gcc ${GG} main_tolower.c ../libft.a test.h
 toupper:
 	gcc ${GG} main_toupper.c ../libft.a test.h
+strlcpy:
+	gcc ${GG} main_strlcpy.c ../libft.a test.h
+strlcat:
+	gcc ${GG} main_strlcat.c ../libft.a test.h
+bzero:
+	gcc ${GG} main_bzero.c ../libft.a test.h
 
