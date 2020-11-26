@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:22:01 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/25 14:30:29 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:33:50 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main()
 	
 
 	if (!((c_or = malloc(sizeof(char) * C_LEN)) && (c_ft = malloc(sizeof(char) * C_LEN))))
-		return (printf("Error malloc i"));
+		return (printf("Error malloc c"));
 	
 	
 	memccpy(c_or, c_tab, C_C, sizeof(c_tab) * C_LEN);

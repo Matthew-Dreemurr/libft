@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strlcpy.c                                     :+:      :+:    :+:   */
+/*   main_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/26 14:32:31 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/26 14:42:48 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/26 15:38:02 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/26 16:00:45 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "test.h"
 
-void test(int size)
+#define SIZE 2
+#define CURSOR 5
+
+int main( void )
 {
-    char string[] = "Hello there, \0\0\0\0\0\0\0\0\0\0";
-    char buffer[] = "test\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
-    int r;
+	char test[80] = {"test destroyed stuff"};
 
-    r = ft_strlcpy(buffer,string,size);
-
-    printf("Copied '%s' into '%s', length %d\n",
-            string,
-            buffer,
-            r
-          );
-}
-
-int main()
-{
-    test(19);
-    test(10);
-    test(2);
-    test(0);
-
-    return(0);
+	printf("|%s|\n", test);
+	ft_bzero(test + CURSOR, SIZE);
+	printf("|%s|\n", test);
+	return (0);
 }
