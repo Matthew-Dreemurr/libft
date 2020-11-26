@@ -6,16 +6,16 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:39:14 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/25 16:54:52 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/11/26 10:54:57 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "test.h"
 
-#define TEXT1	"test"
+#define TEXT1	"test\0\0"
 #define TEXT2	"testss"
-#define LEN		7
+#define LEN		22
 
 int	main()
 {
