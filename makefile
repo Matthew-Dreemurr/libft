@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/11/20 11:58:15 by mhadad           ###   ########.fr        #
+#    Updated: 2020/11/30 14:21:32 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,13 @@ OBJ  = ${SRC:c=o}
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+.PHONY: all, ${NAME}, clean, fclean, re
 
 %.o: %.c
 	${CC} ${CFLAGS} -I . -c $^ -o $@
 
 all: ${NAME}
+
 
 ${NAME}: ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
@@ -33,4 +35,6 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, ${NAME}, clean, fclean, re
+so:
+	$(CC) -fPIC -nostartfiles $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
