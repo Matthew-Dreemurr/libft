@@ -40,4 +40,5 @@ strlcat:
 	gcc ${GG} main_strlcat.c ../libft.a test.h
 bzero:
 	gcc ${GG} main_bzero.c ../libft.a test.h
-
+strnstr:
+	gcc ${GG} main_strnstr.c ../libft.a test.h
