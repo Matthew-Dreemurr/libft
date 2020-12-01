@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:50:46 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/23 17:12:51 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/01 14:53:29 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*d;
+	unsigned char		*d;
 	const unsigned char	*s;
-	size_t			i;
+	size_t				i;
 
 	i = 0;
 	s = src;
