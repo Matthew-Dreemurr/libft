@@ -6,24 +6,35 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 16:57:49 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/30 17:36:39 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/01 14:30:26 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h> // TO REMOVE
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	char	*ret;
-	
+	size_t	b_len;
+	size_t	l_len;
+
+	b_len = ft_strlen(big);
+	l_len = ft_strlen(little);
 	ret = (char *)big;
 	i = 0;
-	while(i < len)
+	if (big == little)
+		return (ret = (char *)big);
+	if (b_len < l_len)
+		return (NULL);
+	if ((b_len && !l_len) || !b_len)
+		return (ret = (char *)big);
+	while(l_len < len)
 	{
-		if (ft_strncmp(big, little, ft_strlen(little)))
+		if (!ft_strncmp(big + i, little, l_len))
 			return (ret);
 		ret++;
+		len--;
 		i++;
 	}
 	return (NULL);
