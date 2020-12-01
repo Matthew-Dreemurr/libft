@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 10:08:49 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/01 10:59:47 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/01 11:48:28 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	main(int ac, char **ag)
 
 	ft_ret = ft_strnstr(b, l, len);
 	or_ret = strnstr(b, l, len);
-	printf("or: %s\nft: %s", or_ret, ft_ret);
+	printf("or: |%s|\nft: |%s|", or_ret, ft_ret);
 }
