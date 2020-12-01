@@ -5,30 +5,30 @@ First project of School 19.
 Fonctions de la libc.
 
 ### Check before push
-- [ ] atoi
-- [	] bzero
-- [	] calloc
-- [	] isalnum
-- [	] isalpha
-- [	] isascii
-- [	] isdigit
-- [	] isprint
-- [	] memccpy
-- [	] memchr
-- [	] memcmp
-- [	] memcpy
-- [	] memmove
-- [	] memset
-- [	] strchr
-- [	] strdup
-- [	] strlcat
-- [	] strlcpy
-- [	] strlen
-- [	] strncmp
-- [	] strnstr
-- [	] strrchr
-- [	] tolower
-- [	] toupper
+- [x] atoi
+- [x] bzero
+- [x] calloc
+- [x] isalnum
+- [x] isalpha
+- [x] isascii
+- [x] isdigit
+- [x] isprint
+- [x] memccpy
+- [x] memchr
+- [x] memcmp
+- [x] memcpy
+- [x] memmove
+- [x] memset
+- [x] strchr
+- [x] strdup
+- [x] strlcat
+- [x] strlcpy
+- [x] strlen
+- [x] strncmp
+- [x] strnstr
+- [x] strrchr
+- [x] tolower
+- [x] toupper
 
 - [ ] libft.h
 
@@ -47,114 +47,103 @@ Fonctions supplémentaires.
 - [ ] ft_strtrim
 - [ ] ft_substr
 
-
 ### Last Log test
 
+--------------------------------------------------------------------------------------------
+|                                     CHECKING FILES                                       |
+--------------------------------------------------------------------------------------------
+Makefile      -Wall     -Wextra   -Werror
+found         ok        ok        ok
 
-ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+Header file   Norme
+found         ok
 
-ft_bzero:      [OK] [OK] [OK] [OK] 
+--------------------------------------------------------------------------------------------
+|                                    COMPILING LIBFT                                       |
+--------------------------------------------------------------------------------------------
+rule all        rule $(NAME)     rule clean       rule fclean     make re         libft.a
+found           not found        found            found           ok              found
 
-ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+--------------------------------------------------------------------------------------------
+|                                     STARTING TESTS                                       |
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+|                                     CHECKING FILES                                       |
+--------------------------------------------------------------------------------------------
+Makefile      -Wall     -Wextra   -Werror
+found         ok        ok        ok
 
-ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+Header file   Norme
+found         ok
 
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+--------------------------------------------------------------------------------------------
+|                                    COMPILING LIBFT                                       |
+--------------------------------------------------------------------------------------------
+rule all        rule $(NAME)     rule clean       rule fclean     make re         libft.a
+found           not found        found            found           ok              found
 
-ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+--------------------------------------------------------------------------------------------
+|                                     STARTING TESTS                                       |
+--------------------------------------------------------------------------------------------
 
-ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+Part1 functions
 
-ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+FUNCTION              NORME          COMPIL.     FORBIDDEN FUNC.  TESTS               RESULT
+ft_atoi               ok             success     clean            ✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓ OK
+ft_bzero              ok             success     clean            ✓✓                  OK
+ft_calloc             ok             success     clean            ✓                   OK
+ft_isalnum            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_isalpha            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_isascii            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_isdigit            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_isprint            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_memccpy            ok             success     clean            ✓✓✓✓                OK
+ft_memchr             ok             success     clean            ✓✓✓✓✓✓              OK
+ft_memcmp             ok             success     clean            ✓✓✓✓✓✓✓✓✓           OK
+ft_memcpy             ok             success     clean            ✓✓✓                 OK
+ft_memmove            ok             success     clean            ✓✓✓✓✓               OK
+ft_memset             ok             success     clean            ✓✓✓✓                OK
+ft_strchr             ok             success     clean            ✓✓✓✓✓✓              OK
+ft_strdup             ok             success     clean            ✓                   OK
+ft_strlcat            ok             success     clean            ✓✓✓✓✓✓✓✓✓           OK
+ft_strlcpy            ok             success     clean            ✓✓✓✓✓               OK
+ft_strlen             ok             success     clean            ✓✓✓✓✓✓              OK
+ft_strncmp            ok             success     clean            ✓✓✓✓✓✓✓✓✓✓✓         OK
+ft_strnstr            ok             success     clean            ✓✓✓✓✓✓✓✓✓✓          OK
+ft_strrchr            ok             success     clean            ✓✓✓✓✓✓✓✓            OK
+ft_tolower            ok             success     clean            ✓✓✓✓✓✓✓             OK
+ft_toupper            ok             success     clean            ✓✓✓✓✓✓✓             OK
 
-ft_isalpha:    [OK] 
+Total : 24/24
 
-ft_isdigit:    [OK] 
+Part2 functions
 
-ft_isalnum:    [OK] 
+FUNCTION              NORME          COMPIL.     FORBIDDEN FUNC.  TESTS               RESULT
+ft_itoa               NTI            NTI         NTI              NTI                 NTI
+ft_putchar_fd         NTI            NTI         NTI              NTI                 NTI
+ft_putendl_fd         NTI            NTI         NTI              NTI                 NTI
+ft_putnbr_fd          NTI            NTI         NTI              NTI                 NTI
+ft_putstr_fd          NTI            NTI         NTI              NTI                 NTI
+ft_split              NTI            NTI         NTI              NTI                 NTI
+ft_strjoin            NTI            NTI         NTI              NTI                 NTI
+ft_strmapi            NTI            NTI         NTI              NTI                 NTI
+ft_strtrim            NTI            NTI         NTI              NTI                 NTI
+ft_substr             NTI            NTI         NTI              NTI                 NTI
 
-ft_isascii:    [OK] 
+Total : 0/10
 
-ft_isprint:    [OK] 
+Bonus functions
 
-ft_toupper:    [OK] 
+FUNCTION              NORME          COMPIL.     FORBIDDEN FUNC.  TESTS               RESULT
+ft_lstadd_back        NTI            NTI         NTI              NTI                 NTI
+ft_lstadd_front       NTI            NTI         NTI              NTI                 NTI
+ft_lstclear           NTI            NTI         NTI              NTI                 NTI
+ft_lstdelone          NTI            NTI         NTI              NTI                 NTI
+ft_lstiter            NTI            NTI         NTI              NTI                 NTI
+ft_lstlast            NTI            NTI         NTI              NTI                 NTI
+ft_lstmap             NTI            NTI         NTI              NTI                 NTI
+ft_lstnew             NTI            NTI         NTI              NTI                 NTI
+ft_lstsize            NTI            NTI         NTI              NTI                 NTI
 
-ft_tolower:    [OK] 
-
-ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-
-ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-
-ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-
-ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] [💥 ] 
-
-ft_strlcat:    [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] 
-
-[fail]: your strlcat does not work with basic input
-
-[fail]: your strlcat return value is false
-
-
-
-ft_strnstr:    [MISSING]
-
-ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-
-ft_calloc:     [MISSING]
-
-ft_strdup:     [MISSING]
-
-
-
-In this part, you can choose to protect your function or not to,
-
-a color code will tell you if your function is protected/not BUT stay coherent !
-
-[🛡 ] --> protected
-
-[💥 ] --> not protected
-
-
-
-ft_substr:     [MISSING]
-
-ft_strjoin:    [MISSING]
-
-ft_strtrim:    [MISSING]
-
-ft_split:      [MISSING]
-
-ft_itoa:       [MISSING]
-
-ft_strmapi:    [MISSING]
-
-ft_putchar_fd: [MISSING]
-
-ft_putstr_fd:  [MISSING]
-
-ft_putendl_fd: [MISSING]
-
-ft_putnbr_fd:  [MISSING]
-
-
-
-ft_lstnew:     [MISSING]
-
-ft_lstadd_front: [MISSING]
-
-ft_lstsize:    [MISSING]
-
-ft_lstlast:    [MISSING]
-
-ft_lstadd_back:[MISSING]
-
-ft_lstdelone:  [MISSING]
-
-ft_lstclear:   [MISSING]
-
-ft_lstiter:    [MISSING]
-
-ft_lstmap:     [MISSING]
-
-See result.log for more informations !
+Total : 0/9
+Abort : A Bus error : B Segmentation fault : S Timeout : T Nothing turned in : NTI
