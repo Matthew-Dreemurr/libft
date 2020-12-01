@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:36:36 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/30 16:34:57 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/01 14:46:23 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@
 int	ft_atoi(const char *c)
 {
 	long int	ret;
-	int				neg;
-	int				i;
+	int			neg;
+	int			i;
 
 	i = 0;
 	ret = 0;
