@@ -6,11 +6,13 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:17:35 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/01 16:22:52 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/01 16:27:40 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_putchar_fd(char c, int fd)
 {
-
+	write(fd, &c, 1);
 }
