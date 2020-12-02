@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:56:51 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 20:41:05 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/02 20:42:45 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s1 = (char *)s;
 	if (!(buff = malloc(sizeof(buff) * len + 1)))
 		return (NULL);
-	ft_bzero(buff, len);
+	ft_bzero(buff, len + 1);
 	if (start >= ft_strlen(s))
 		return (buff);
 	while (start--)
