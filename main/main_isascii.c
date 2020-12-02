@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_isascii.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/24 17:21:58 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/25 12:28:53 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include "test.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int		main(int ac, char **ag)
 {
-	int tmp;
+	int i;
+	i = 1;
+	
+	if (ac < 2)
+		return (printf("[isascii] Error"));
+	for (i = 1; i < ac; i++)
+		printf("[%c]\nok ? [%d]\nor: [%d] ft: [%d]\n\n",ag[i][0], (ft_isascii((int)ag[i][0]) == isascii((int)ag[i][0])), ft_isascii((int)ag[i][0]), isascii((int)ag[i][0]));
+	return (0);
 
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
 }

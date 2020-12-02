@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/26 15:38:02 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/26 16:00:45 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include "test.h"
 
-void	ft_putnbr_fd(int n, int fd)
+#define SIZE 2
+#define CURSOR 5
+
+int main( void )
 {
-	int tmp;
+	char test[80] = {"test destroyed stuff"};
 
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
+	printf("|%s|\n", test);
+	ft_bzero(test + CURSOR, SIZE);
+	printf("|%s|\n", test);
+	return (0);
 }

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/24 17:19:15 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/25 12:26:48 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include "test.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int		main(int ac, char **ag)
 {
-	int tmp;
+	int i;
+	i = 1;
+	
+	if (ac < 2)
+		return (printf("[isalpha] Error"));
+	for (i = 1; i < ac; i++)
+		printf("[%c]\nok ? [%d]\nor: [%d] ft: [%d]\n\n",ag[i][0], (ft_isalpha((int)ag[i][0]) == isalpha((int)ag[i][0])), ft_isalpha((int)ag[i][0]), isalpha((int)ag[i][0]));
+	return (0);
 
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
 }

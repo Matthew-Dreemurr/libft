@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/24 17:23:25 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/25 15:38:58 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include "test.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int		main(int ac, char **ag)
 {
-	int tmp;
-
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
+	if (ac < 2)
+		return (printf("[strlen] Error"));
+	printf("%d [ft: %lu, or: %lu]\n", (ft_strlen(ag[1]) == strlen(ag[1])), ft_strlen(ag[1]), strlen(ag[1]));
+	return (0);
 }

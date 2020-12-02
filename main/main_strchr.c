@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_strchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/25 15:20:46 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/25 15:33:43 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include "test.h"
 
-void	ft_putnbr_fd(int n, int fd)
+#define TEXT	"0000000000000000000000000000000000000O0000000000000000000"
+#define C		'O'
+
+int	main()
 {
-	int tmp;
+	char	*tab = {TEXT};
 
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
+	printf("\n\nor: |%s|",strchr(tab, C));
+	printf("\n\nft: |%s|",ft_strchr(tab, C));
+	return (0);
 }

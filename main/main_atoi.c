@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   main_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 16:44:24 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/02 14:29:31 by mhadad           ###   ########.fr       */
+/*   Created: 2020/11/25 11:39:08 by mhadad            #+#    #+#             */
+/*   Updated: 2020/11/25 12:01:01 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "test.h"
+#include "../libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	main(int ac, char **ag)
 {
-	int tmp;
 
-	tmp = 0;
-	while (n)
-	{
-		tmp += n % 10;
-		write(fd, &n, 1);
-		tmp += n / 10;
-	}	
+	if (ac < 2)
+		return(printf("[atoi] : Error 404"));
+	printf("ok ? [%d]\nor: [%d] ft: [%d]", (atoi(ag[1]) == ft_atoi(ag[1])), atoi(ag[1]), ft_atoi(ag[1]));
 }
