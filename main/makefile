@@ -5,7 +5,7 @@ add:
 	find ../*.c | sed 's/ft_*/main_/' | sed 's/..\///' | xargs -n 1 touch
 rm:
 	rm a.out
-atoi:	all
+atoi:		all
 	gcc ${GG} main_atoi.c ../libft.a test.h
 isalnum:	all
 	gcc ${GG} main_isalnum.c ../libft.a test.h
@@ -43,3 +43,11 @@ bzero:		all
 	gcc ${GG} main_bzero.c ../libft.a test.h
 strnstr:	all
 	gcc ${GG} main_strnstr.c ../libft.a test.h
+putchar_fd:	all
+	gcc ${GG} main_putchar_fd.c ../libft.a test.h
+putstr_fd:	all
+	gcc ${GG} main_putstr_fd.c ../libft.a test.h
+putnbr_fd:	all
+	gcc ${GG} main_putnbr_fd.c ../libft.a test.h
+substr:	all
+	gcc ${GG} main_substr.c ../libft.a test.h
