@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/03 14:14:55 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/03 14:19:53 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ char    *ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	if (!(buff = malloc(len + 1)))
 		return (NULL);
+	ft_bzero(buff, len + 1);
 	while (len-- > 0)
 	{
 		if (s1[s_skip] == *set)
-			s_skip += skip(s1 + s_skip + i, set);
+			s_skip += skip(s1 + s_skip, set);
 		buff[i] = s1[s_skip];
 		i++;
 		s_skip++;
