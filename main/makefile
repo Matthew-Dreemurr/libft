@@ -51,3 +51,5 @@ putnbr_fd:	all
 	gcc ${GG} main_putnbr_fd.c ../libft.a test.h
 substr:	all
 	gcc ${GG} main_substr.c ../libft.a test.h
+strjoin:	all
+	gcc ${GG} main_strjoin.c ../libft.a test.h
