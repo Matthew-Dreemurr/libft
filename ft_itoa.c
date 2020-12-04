@@ -6,31 +6,40 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:19:23 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/04 12:45:03 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/04 12:58:48 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include "main/test.h"
-
-char		*exception(int n)
+char	*exception(int n, char *ret)
 {
 	if (n == 0)
-		return ("0");
+	{
+		if (!(ret = malloc(11)))
+			return (NULL);
+		return (ret = "0");
+	}
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		if (!(ret = malloc(11)))
+			return (NULL);
+		return (ret = "-2147483648");
+	}
 	if (n == 2147483647)
-		return ("2147483647");
+	{
+		if (!(ret = malloc(11)))
+			return (NULL);
+		return (ret = "2147483647");
+	}
 	else
 		return (NULL);
-	
 }
 
 int		check_len(int n)
 {
 	int		size;
-	
+
 	size = 0;
 	if (n < 0)
 		n *= -1;
@@ -39,7 +48,6 @@ int		check_len(int n)
 		n /= 10;
 		size++;
 	}
-	printf("\nsize: %d\n", size);
 	return (size);
 }
 
@@ -49,7 +57,8 @@ char	*ft_itoa(int n)
 	int		size;
 	int		isneg;
 
-	if ((ret = exception(n)))
+	ret = 0;
+	if ((ret = exception(n, ret)))
 		return (ret);
 	isneg = 0;
 	size = check_len(n);
@@ -58,16 +67,15 @@ char	*ft_itoa(int n)
 		n *= -1;
 		isneg++;
 	}
-	printf("isneg: %d\n", isneg);
-	if (!(ret = malloc(size)))
+	if (!(ret = malloc(size + isneg + 1)))
 		return (NULL);
 	ft_bzero(ret, size);
-	if (isneg)
-		*ret = '-';
 	while (n)
 	{
 		ret[--size + isneg] = (n % 10) + '0';
 		n /= 10;
 	}
+	if (isneg)
+		*ret = '-';
 	return (ret);
 }
