@@ -6,13 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:19:23 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/04 15:39:11 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/06 14:56:30 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include "main/test.h"
 
 unsigned int		check_len(unsigned int n)
 {
