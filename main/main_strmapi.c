@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strtrim.c                                     :+:      :+:    :+:   */
+/*   main_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 10:05:00 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/06 18:14:41 by mhadad           ###   ########.fr       */
+/*   Created: 2020/12/06 17:11:16 by mhadad            #+#    #+#             */
+/*   Updated: 2020/12/06 17:14:26 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../libft.h"
 
-int	main(int ac, char **ag)
+#include "../libft.h"
+#include "test.h"
+
+int		main(int ac, char **ag)
 {
 	if (ac < 2)
-		return (printf("[strtrim] Error"));
-	char	*tmp;
-	printf("\n\nmain\n");
-	
-	tmp = ft_strtrim(ag[1], ag[2]);
-	printf("tmp main\n");
-	printf("|%s|", tmp);
-	return (0);
+		return (printf("[isdigit] Error"));
+
+	ft_strtrim(ag[1], ag[2]);
 }
