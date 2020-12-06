@@ -57,3 +57,5 @@ strtrim:	all
 	gcc ${GG} main_strtrim.c ../libft.a test.h
 itoa:	all
 	gcc ${GG} main_itoa.c ../libft.a test.h
+strtrim:	all
+	gcc ${GG} main_strtrim.c ../libft.a test.h
