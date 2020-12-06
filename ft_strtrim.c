@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/06 20:32:53 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/06 22:20:52 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	}
 	printf("while 2\n");
-	while (len--)
-	{
-		if (!(check_set_start(*s1, set)))
-			break;
-		start++;
-	}
+//	while (len--)
+//	{
+//		if (!(check_set_start(*s1, set)))
+//			break;
+//		start++;
+//	}
 	printf("substr\n");
-	if (!(buff = ft_substr(s1, start, len - start)))
+	if (!(buff = ft_substr(s1, start, len)))
 		return (NULL);
 	printf("|%s|", buff);
 
 	return (buff);
 }
+
+make strtrim && ./a.out aabcde a
