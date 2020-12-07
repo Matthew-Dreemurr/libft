@@ -6,18 +6,16 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/07 16:21:01 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:21:36 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
 int		check_set(char c, const char *set)
 {
 	while (*set)
 	{
-		printf("check_set buff: %c\n", c);
 
 		if (c == *set)
 			return (1);
@@ -59,10 +57,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break;
 		start++;
 	}
-	printf("\n\n");
 	if (!(buff = ft_substr(s1, start, len)))
 		return (NULL);
-	printf("buff: %s\n", buff);
 
 	
 	len = check_set_end(buff, set);
