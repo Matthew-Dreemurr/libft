@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/07 16:21:36 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/08 13:23:21 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		check_set(char c, const char *set)
 	}
 	return (0);
 }
+
 size_t	check_set_end(const char *buff, char const *set)
 {
 	size_t	len;
