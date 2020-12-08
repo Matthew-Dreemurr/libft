@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 10:37:07 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/08 12:42:22 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/08 13:41:28 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 **	[Salut_comment_vas_tu_?]
 **	clean_str make a buff with the ft_strtrim of s
 **	sep_count count number of sep whit the buff form clean_str
+**	tab_alloc count len of each word en alloc buff[index] whit len_word + 1
 */
 
 char		*clean_str(char const *s, char c)
@@ -50,20 +51,38 @@ size_t	sep_count(char const *buff, char c)
 	return (1);
 }
 
-char	**tab_alloc(char const *buff, char c, size_t len)
+int		check_sep(char c, const char set)
+{
+	if (c == set)
+		return (1);
+	return (0);
+}
+
+char	**tab_alloc(char const *buff, char c)
 {
 	char	**ret;
-	size_t	i;
-	size_t	len;
+	size_t	len_word;
+	size_t	index;
 
-	i = 0;
-	len = 0;
-	while ()
+	len_word = 0;
+	index = 0;
+
+	if (!(ret = malloc(sizeof(char *) * sep_count(buff, c))))
+		return (NULL);
+	while (buff[index])
 	{
-		// faire separation de chaque mot, les compter et alloc len word + 1 a re[i]
-		ret[i] = malloc();
-
+		if (check_sep(buff[len_word], c))
+			{
+				len_word--;
+				if (!(ret[index] = malloc(len_word + 1)))
+					return (NULL);
+				ft_bzero(ret[index], len_word + 1);
+				len_word = 0;
+			}
+		len_word++;
+		index++;
 	}
+	return (ret);
 }
 
 char	**ft_split(char const *s, char c)
@@ -71,13 +90,15 @@ char	**ft_split(char const *s, char c)
 	char	*buff;
 	char	**ret;
 
+	if (!s)
+		return (NULL);
 												printf("s: |%s|\n", s);
 												printf("c: |%c|\n\n", c);
 	if (!(buff = clean_str(s, c)))
 		return (NULL);
 												printf("buff cleaned: |%s|\n", buff);
 	
-	if (!(ret = tab_alloc(buff, c, sep_count(buff, c))))
+	if (!(ret = tab_alloc(buff, c)))
 		return (NULL);
 	return (NULL);
 }
