@@ -6,12 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 10:37:07 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/08 13:41:28 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/08 15:01:03 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "main/test.h"
 /*
 **	[Salut_comment_vas_tu_?]
 **	clean_str make a buff with the ft_strtrim of s
@@ -47,7 +46,6 @@ size_t	sep_count(char const *buff, char c)
 			i++;
 		buff++;
 	}
-												printf("sep: %lu\n", i);
 	return (1);
 }
 
@@ -60,27 +58,33 @@ int		check_sep(char c, const char set)
 
 char	**tab_alloc(char const *buff, char c)
 {
-	char	**ret;
-	size_t	len_word;
-	size_t	index;
+	char			**ret;
+	size_t			len_word;
+	size_t			index;
+	size_t			i;
+	unsigned int	dest_start;
 
 	len_word = 0;
+	dest_start = 0;
 	index = 0;
+	i = 0;
 
 	if (!(ret = malloc(sizeof(char *) * sep_count(buff, c))))
 		return (NULL);
-	while (buff[index])
+	while (buff[i])
 	{
-		if (check_sep(buff[len_word], c))
-			{
-				len_word--;
-				if (!(ret[index] = malloc(len_word + 1)))
-					return (NULL);
-				ft_bzero(ret[index], len_word + 1);
-				len_word = 0;
-			}
+		if (check_sep(buff[i - 1], c))
+		{
+			if (!(ret[index] = malloc(len_word)))
+				return (NULL);
+			ft_bzero(ret[index], len_word);
+			ret[index] = ft_substr(buff, dest_start, len_word - 1);
+			dest_start += len_word;
+			len_word = 0;
+			index++;
+		}
+		i++;
 		len_word++;
-		index++;
 	}
 	return (ret);
 }
@@ -92,13 +96,14 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-												printf("s: |%s|\n", s);
-												printf("c: |%c|\n\n", c);
+	if (!c)
+		return (NULL);
 	if (!(buff = clean_str(s, c)))
 		return (NULL);
-												printf("buff cleaned: |%s|\n", buff);
 	
 	if (!(ret = tab_alloc(buff, c)))
 		return (NULL);
-	return (NULL);
+	return (ret);
 }
+
+//////////////////////////// make split && ./a.out "__test_" '_'
