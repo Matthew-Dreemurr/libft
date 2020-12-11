@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/08 13:23:21 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 15:58:06 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int		check_set(char c, const char *set)
 {
 	while (*set)
 	{
-
 		if (c == *set)
 			return (1);
 		set++;
@@ -32,10 +31,9 @@ size_t	check_set_end(const char *buff, char const *set)
 	while (buff[len])
 	{
 		if (!(check_set(buff[len], set)))
-			break;
+			break ;
 		len--;
 	}
-
 	return (len);
 }
 
@@ -44,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*buff;
 	size_t		len;
 	size_t		start;
-	
+
 	if (!s1)
 		return (NULL);
 	start = 0;
@@ -55,17 +53,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[start])
 	{
 		if (!(check_set(s1[start], set)))
-			break;
+			break ;
 		start++;
 	}
 	if (!(buff = ft_substr(s1, start, len)))
 		return (NULL);
-
-	
 	len = check_set_end(buff, set);
 	if (!(buff = ft_substr(buff, 0, len + 1)))
 		return (NULL);
-
 	return (buff);
 }
-
