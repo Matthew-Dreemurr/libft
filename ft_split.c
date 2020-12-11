@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 17:06:11 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 17:11:29 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,11 @@ size_t	md_sepcount(const char *buff, int sep)
 	return (ret);
 }
 
-char	**md_cpy(char const *buff, char set)
+char	**md_cpy(char const *buff, char set, char **ret)
 {
 	size_t	check;
 	size_t	len;
 	size_t	index;
-	char	**ret;
 
 	index = 0;
 	check = 0;
@@ -55,6 +54,7 @@ char	**md_cpy(char const *buff, char set)
 		index++;
 		check += len;
 	}
+	return (ret);
 }
 
 char	**md_alloc(char const *buff, char set)
@@ -66,7 +66,7 @@ char	**md_alloc(char const *buff, char set)
 	if (!(ret = malloc(sizeof(char *) * (len + 1))))
 		return (NULL);
 	ft_bzero(ret, sizeof(char *) * (len + 1));
-	if (!(md_cpy(buff, set)))
+	if (!(md_cpy(buff, set, ret)))
 		return (NULL);
 	return (ret);
 }
@@ -90,12 +90,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	if (!(buff = md_clean(s, c)))
-	{
-		while (ret[i])
-			free(ret[i]);
-		free(ret);
 		return (NULL);
-	}
 	if (!(ret = md_alloc(buff, c)))
 	{
 		while (ret[i])
