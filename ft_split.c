@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 10:10:46 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 10:14:54 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**md_alloccpy(char const *buff, char set)
 																					DEBUGs("len: %lu\n", len);
 		if (!(ret[index] = malloc(sizeof(char) * len + 1)))
 			return (NULL);
-		if (!(ret[index] = ft_substr(buff, check, len + 1)))
+		if (!(ret[index] = ft_substr(buff, check, len)))
 			return (NULL);
 																					printf("---------\n");
 																					DEBUGs("index: %lu\n", index);
