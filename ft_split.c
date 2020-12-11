@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 16:00:27 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 17:06:11 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,15 @@ size_t	md_sepcount(const char *buff, int sep)
 	return (ret);
 }
 
-char	**md_alloccpy(char const *buff, char set)
+char	**md_cpy(char const *buff, char set)
 {
-	size_t	len;
 	size_t	check;
+	size_t	len;
 	size_t	index;
 	char	**ret;
 
 	index = 0;
 	check = 0;
-	len = md_sepcount(buff, set);
-	ret = malloc(sizeof(char *) * (len + 1));
-	ft_bzero(ret, sizeof(char *) * (len + 1));
 	while (buff[check])
 	{
 		len = 0;
@@ -58,6 +55,19 @@ char	**md_alloccpy(char const *buff, char set)
 		index++;
 		check += len;
 	}
+}
+
+char	**md_alloc(char const *buff, char set)
+{
+	size_t	len;
+	char	**ret;
+
+	len = md_sepcount(buff, set);
+	if (!(ret = malloc(sizeof(char *) * (len + 1))))
+		return (NULL);
+	ft_bzero(ret, sizeof(char *) * (len + 1));
+	if (!(md_cpy(buff, set)))
+		return (NULL);
 	return (ret);
 }
 
@@ -74,13 +84,25 @@ char	**ft_split(char const *s, char c)
 {
 	char	*buff;
 	char	**ret;
+	size_t	i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	if (!(buff = md_clean(s, c)))
+	{
+		while (ret[i])
+			free(ret[i]);
+		free(ret);
 		return (NULL);
-	if (!(ret = md_alloccpy(buff, c)))
+	}
+	if (!(ret = md_alloc(buff, c)))
+	{
+		while (ret[i])
+			free(ret[i]);
+		free(ret);
 		return (NULL);
+	}
 	free(buff);
 	return (ret);
 }
