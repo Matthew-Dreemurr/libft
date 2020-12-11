@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 12:07:23 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 16:00:27 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	**md_alloccpy(char const *buff, char set)
 	check = 0;
 	len = md_sepcount(buff, set);
 	ret = malloc(sizeof(char *) * (len + 1));
-	ft_bzero(ret,  sizeof(char *) *(len + 1));
+	ft_bzero(ret, sizeof(char *) * (len + 1));
 	while (buff[check])
 	{
 		len = 0;
