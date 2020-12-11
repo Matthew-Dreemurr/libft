@@ -6,35 +6,31 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/11/30 14:21:32 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/11 17:32:54 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC  = ${wildcard *.c}
+SRC  = ${wildcard src/*/*.c}
 OBJ  = ${SRC:c=o}
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-.PHONY: all, ${NAME}, clean, fclean, re
 
 %.o: %.c
-	${CC} ${CFLAGS} -I . -c $^ -o $@
+	${CC} ${CFLAGS} -I include -c $^ -o $@
 
-all: ${NAME}
-
+all: $(NAME)
 
 ${NAME}: ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
 
 clean:
-	rm -f *.o
+	rm -f src/*/*.o
 
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-so:
-	$(CC) -fPIC -nostartfiles $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)
+.PHONY: all, ${NAME}, clean, fclean, re
