@@ -6,20 +6,16 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 10:20:40 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 11:15:43 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "main/test.h"
-
-#define DEBUG(num) printf("-----------[DEBUG %s]---------\n", num);
-#define DEBUGs(txt, info) printf(txt, info);
 
 size_t	md_sepcount(const char *buff, int sep)
 {
-	size_t	i; 
-	size_t	ret; 
+	size_t	i;
+	size_t	ret;
 
 	i = 0;
 	ret = 0;
@@ -30,10 +26,9 @@ size_t	md_sepcount(const char *buff, int sep)
 			while (buff[i] != sep && buff[i])
 				i++;
 			ret++;
-		}	
+		}
 		i++;
 	}
-																DEBUGs("md_sepcount ret: %lu\n", ret);
 	return (ret);
 }
 
@@ -51,33 +46,19 @@ char	**md_alloccpy(char const *buff, char set)
 	ft_bzero(ret, len + 1);
 	while (buff[check])
 	{
-																					DEBUG("md_alloccpy");
-																					DEBUGs("index: %lu\n", index);
-																					DEBUGs("len: %lu\n", len);
-																					DEBUGs("check: %lu\n", check);
-																					printf("---------\n");
 		len = 0;
 		while (buff[check] == set && buff[check])
 			check++;
-																					DEBUGs("check: %lu\n", check);
 		while (buff[len + check] != set && buff[len + check])
 			len++;
-																					DEBUGs("len: %lu\n", len);
 		if (!(ret[index] = malloc(sizeof(char) * len + 1)))
 			return (NULL);
-		ft_bzero(ret[index], len + 1);
 		if (!(ret[index] = ft_substr(buff, check, len)))
 			return (NULL);
-																					printf("---------\n");
-																					DEBUGs("index: %lu\n", index);
-																					DEBUGs("len: %lu\n", len);
-																					DEBUGs("check: %lu\n", check);
-																					DEBUGs("check: %s\n", ret[index]);
 		index++;
 		check += len;
 	}
-																					DEBUG("md_alloccpy ret");
-	return(ret);
+	return (ret);
 }
 
 char	*md_clean(char const *s, char c)
@@ -86,7 +67,6 @@ char	*md_clean(char const *s, char c)
 
 	ft_bzero(set, 2);
 	set[0] = c;
-																	DEBUG("md_clean ret");
 	return (ft_strtrim(s, set));
 }
 
@@ -97,23 +77,10 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-																		DEBUG("start");
-//*	ft_strtrim pour éviter de séparer du vide *//
 	if (!(buff = md_clean(s, c)))
 		return (NULL);
-															DEBUGs("\nbuff clean: |%s|\n", buff);
-															DEBUG("md_clean 1");
 	if (!(ret = md_alloccpy(buff, c)))
 		return (NULL);
-DEBUG("md_alloccpy 1");
-
-
-
-
-
-
 	free(buff);
-
-DEBUG("END SPLIT");
 	return (ret);
 }
