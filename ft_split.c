@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 11:15:43 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/11 12:07:23 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ char	**md_alloccpy(char const *buff, char set)
 	index = 0;
 	check = 0;
 	len = md_sepcount(buff, set);
-	ret = malloc(sizeof(char *) * len + 1);
-	ft_bzero(ret, len + 1);
+	ret = malloc(sizeof(char *) * (len + 1));
+	ft_bzero(ret,  sizeof(char *) *(len + 1));
 	while (buff[check])
 	{
 		len = 0;
@@ -51,7 +51,7 @@ char	**md_alloccpy(char const *buff, char set)
 			check++;
 		while (buff[len + check] != set && buff[len + check])
 			len++;
-		if (!(ret[index] = malloc(sizeof(char) * len + 1)))
+		if (!(ret[index] = malloc(sizeof(char) * (len + 1))))
 			return (NULL);
 		if (!(ret[index] = ft_substr(buff, check, len)))
 			return (NULL);
