@@ -6,13 +6,13 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:19:23 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 15:53:46 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/12 08:44:54 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	check_len(unsigned int n)
+static unsigned int	check_len(unsigned int n)
 {
 	int		size;
 
@@ -25,7 +25,7 @@ unsigned int	check_len(unsigned int n)
 	return (size);
 }
 
-char			*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	char			*ret;
 	int				size;
@@ -38,7 +38,7 @@ char			*ft_itoa(int n)
 	else
 		num = n;
 	size = check_len(num);
-	if (!(ret = malloc(size + isneg + 1)))
+	if (!(ret = malloc(sizeof(char) * (size + isneg + 1))))
 		return (NULL);
 	ft_bzero(ret, size + isneg + 1);
 	while (num)

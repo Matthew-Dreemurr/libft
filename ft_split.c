@@ -6,13 +6,13 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 17:11:29 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/12 07:53:31 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	md_sepcount(const char *buff, int sep)
+static size_t	md_sepcount(const char *buff, int sep)
 {
 	size_t	i;
 	size_t	ret;
@@ -32,7 +32,7 @@ size_t	md_sepcount(const char *buff, int sep)
 	return (ret);
 }
 
-char	**md_cpy(char const *buff, char set, char **ret)
+static char		**md_cpy(char const *buff, char set, char **ret)
 {
 	size_t	check;
 	size_t	len;
@@ -57,7 +57,7 @@ char	**md_cpy(char const *buff, char set, char **ret)
 	return (ret);
 }
 
-char	**md_alloc(char const *buff, char set)
+static char		**md_alloc(char const *buff, char set)
 {
 	size_t	len;
 	char	**ret;
@@ -71,7 +71,7 @@ char	**md_alloc(char const *buff, char set)
 	return (ret);
 }
 
-char	*md_clean(char const *s, char c)
+static char		*md_clean(char const *s, char c)
 {
 	char	set[2];
 
@@ -80,7 +80,7 @@ char	*md_clean(char const *s, char c)
 	return (ft_strtrim(s, set));
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	*buff;
 	char	**ret;

@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 09:22:19 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 15:55:37 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/12 08:20:43 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	if (!(buff = malloc(len_s1 + len_s2 + 1)))
+	if (!(buff = malloc(sizeof(buff) * (len_s1 + len_s2 + 1))))
 		return (NULL);
 	ft_bzero(buff, len_s1 + len_s2 + 1);
 	ft_strlcat(buff, s1, len_s1 + 1);

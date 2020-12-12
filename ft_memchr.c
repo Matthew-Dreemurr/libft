@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:02:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/01 14:52:47 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/12 08:40:27 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (cpy_s);
 		cpy_s++;
 	}
-	return (c ? NULL : cpy_s);
+	if (c)
+		return (NULL);
+	else
+		return (cpy_s);
 }

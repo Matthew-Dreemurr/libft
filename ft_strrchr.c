@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:28:44 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/01 14:54:34 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/12 08:31:37 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ char	*ft_strrchr(const char *s, int c)
 			return (cpy_c);
 		cpy_c--;
 	}
-	return (c ? NULL : cpy_c);
+	if (c)
+		return (NULL);
+	else
+		return (cpy_c);
 }
