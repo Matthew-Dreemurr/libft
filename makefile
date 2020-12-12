@@ -6,12 +6,12 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/11 17:32:54 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/12 08:39:55 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC  = ${wildcard src/*/*.c}
+SRC  = ${wildcard *.c}
 OBJ  = ${SRC:c=o}
 
 CC = gcc
