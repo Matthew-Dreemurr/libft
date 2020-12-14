@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:37:15 by mhadad            #+#    #+#             */
-/*   Updated: 2020/11/23 13:38:37 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/14 12:49:25 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char			*s1;
 	const unsigned char		*s2;
 
-	s1 = dest;
-	s2 = src;
+	s1 = (unsigned char *)dest;
+	s2 = (const unsigned char *)src;
 	while (n--)
 	{
 		*s1 = *s2;
