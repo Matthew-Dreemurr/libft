@@ -6,18 +6,18 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:36:36 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:08:42 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/14 17:13:54 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	DESCRIPTION
-**		The  atoi() function converts the initial portion of the string
-**		pointed to by c to int.
-**	RETURN VALUE
-**		The converted value.
+*	DESCRIPTION
+*		The  atoi() function converts the initial portion of the string
+*		pointed to by c to int.
+*	RETURN VALUE
+*		The converted value.
 */
 
 int	ft_atoi(const char *c)
