@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:36:36 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/11 15:41:27 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/14 16:02:15 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_atoi(const char *c)
 {
 	long int	ret;
+	long int	max;
 	int			neg;
 	int			i;
 
@@ -29,9 +30,10 @@ int	ft_atoi(const char *c)
 			neg = -1;
 		i++;
 	}
+	max = LONG_MAX / 10;
 	while (ft_isdigit(c[i]))
 	{
-		if ((ret = ret * 10 + c[i] - '0') < 0)
+		if (ret > max || (ret = ret * 10 + c[i] - '0') < 0)
 			return (neg == 1 ? -1 : 0);
 		i++;
 	}
