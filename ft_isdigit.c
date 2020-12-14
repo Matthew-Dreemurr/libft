@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 17:32:51 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:26:29 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/14 17:28:24 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 **	RETURN VALUE
 **		The values returned are nonzero if the character c falls into the tested class, and zero if not.
 */
-
 
 int	ft_isdigit(int c)
 {
