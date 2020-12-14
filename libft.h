@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:03:28 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 15:50:26 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/14 16:28:49 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define MAX_INT			2147483647
-# define MIN_INT			-2147483648
-# define LONG_MAX	9223372036854775807L
-# define LONG_MAX			2147483647L
+# define MAX_INT	2147483647
+# define MIN_INT	-2147483648
+# define LONG_MAX	9223372036854775807
+# define LONG_MIN	-9223372036854775808
 
 
 void	*ft_memset(void *b, int c, size_t len);
