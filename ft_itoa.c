@@ -6,21 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:19:23 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:30:54 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 13:33:23 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	DESCRIPTION
-**		Allocates (with malloc(3)) and returns a string
-**		representing the integer received as an argument.
-**		Negative numbers must be handled.
-**	RETURN VALUE
-**		The string representing the integer. NULL if the
-**		allocation fails.
-*/
 
 static unsigned int	check_len(unsigned int n)
 {

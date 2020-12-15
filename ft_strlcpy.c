@@ -6,23 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 14:38:34 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 12:30:22 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 13:34:37 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	DESCRIPTION
-**		The strlcpy() function copy and concatenate strings respectively.
-**		strlcpy() take the full size of the buffer (not just the length)
-**		and guarantee to NUL-terminate the result.
-**	RETURN VALUE
-**		The strlcpy() function return the total length of the string
-**		they tried to create. That means the length of src.
-**		While this may seem somewhat confusing, it was done to
-**		make truncation detection simple.
-*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,22 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 11:15:10 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 13:34:08 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	DESCRIPTION
-**		Allocates (with malloc(3)) and returns an array
-**		of strings obtained by splitting ’s’ using the
-**		character ’c’ as a delimiter. The array must be
-**		ended by a NULL pointer.
-**	RETURN VALUE
-**		The array of new strings resulting from the split.
-**		NULL if the allocation fails.
-*/
 
 static size_t	md_sepcount(const char *buff, int sep)
 {

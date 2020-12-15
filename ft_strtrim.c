@@ -6,20 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 12:10:26 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 13:35:07 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	DESCRIPTION
-**		Allocates (with malloc(3)) and returns a copy of
-**		’s1’ with the characters specified in ’set’ removed
-**		from the beginning and the end of the string.
-**	RETURN VALUE
-**		The trimmed string. NULL if the allocation fails.
-*/
 
 static int		check_set(char c, const char *set)
 {

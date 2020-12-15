@@ -6,19 +6,11 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 09:22:19 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 11:45:40 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 13:34:29 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	DESCRIPTION
-**		Allocates (with malloc(3)) and returns a new
-**		string, which is the result of the concatenation of ’s1’ and ’s2’.
-**	RETURN VALUE
-**		The new string. NULL if the allocation fails.
-*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
