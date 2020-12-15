@@ -6,11 +6,22 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 09:51:37 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/12 07:54:56 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 11:27:03 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	DESCRIPTION
+		The  strchr()  function  returns  a pointer to the first occurrence of the
+		character c in the string s.
+**	RETURN VALUE
+		The strchr() function return a pointer to the matched char‐
+		acter or NULL if the character is not found.  The terminating null byte is
+		considered part of the string, so that if c is specified  as  '\0',  these
+		functions return a pointer to the terminator.
+*/
 
 char	*ft_strchr(const char *s, int c)
 {
