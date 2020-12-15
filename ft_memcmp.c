@@ -6,14 +6,14 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:23:53 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 10:32:49 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:25:21 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	DESCRIPTION	
+**	DESCRIPTION
 **		The  memcmp()  function compares the first n bytes (each interpreted as
 **		unsigned char) of the memory areas s1 and s2.
 **	RETURN VALUE

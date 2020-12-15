@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:04:19 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 10:42:56 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:27:19 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 /*
 **	DESCRIPTION
-**		The  memset()  function fills the first n bytes of the memory area pointed
-**		to by s with the constant byte c.
+**		The  memset()  function fills the first n bytes of the memory
+**		area pointedto by s with the constant byte c.
 **	RETURN VALUE
 **		The memset() function returns a pointer to the memory area s.
 */

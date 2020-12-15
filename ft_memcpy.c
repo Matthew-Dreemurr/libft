@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:24:00 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 10:40:42 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:25:30 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /*
 **	DESCRIPTION
-**		The  memcpy()  function  copies n bytes from memory area src to memory area dest.
+**		The  memcpy()  function  copies n bytes from
+**		memory area src to memory area dest.
 **		The memory areas must not overlap.
 **	RETURN VALUE
 **		The memcpy() function returns a pointer to dest.

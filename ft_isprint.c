@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:16:25 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:29:13 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:24:25 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 **		isprint()
 **		checks for a lowercase character.
 **	RETURN VALUE
-**		The values returned are nonzero if the character c falls into the tested class, and zero if not.
+**		The values returned are nonzero if the character c
+**		falls into the tested class, and zero if not.
 */
 
 int	ft_isprint(int c)

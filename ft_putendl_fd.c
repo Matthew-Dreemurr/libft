@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:38:33 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 11:11:54 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:27:42 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /*
 **	DESCRIPTION
-**		Outputs the string ’s’ to the given file  descriptor, followed by a newline.
+**		Outputs the string ’s’ to the given file  descriptor,
+**		followed by a newline.
 **	RETURN VALUE
 **		None.
 */

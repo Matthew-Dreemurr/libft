@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:02:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:35:33 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:25:03 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 /*
 **	DESCRIPTION
-**		The  memchr()  function scans the initial n bytes of the memory area pointed to by s for
-**		the first instance of c.  Both c and the bytes of the memory area pointed to  by  s  are
+**		The  memchr()  function scans the initial n bytes of
+**		the memory area pointed to by s for
+**		the first instance of c.  Both c and the bytes of the
+**		memory area pointed to  by  s  are
 **		interpreted as unsigned char.
 **	RETURN VALUE
 **		The  memchr()  function return a pointer to the matching byte or NULL if

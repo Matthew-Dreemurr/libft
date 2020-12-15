@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 23:02:16 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/14 17:23:09 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/15 12:22:14 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 /*
 **	DESCRIPTION
-**		isalnum() checks for an alphanumeric character; it is equivalent to (isalpha(c) || isdigit(c)).
+**		isalnum() checks for an alphanumeric character;
+**		it is equivalent to (isalpha(c) || isdigit(c)).
 **	RETURN VALUE
-**		The values returned are nonzero if the character c falls into the tested class, and zero if not.
+**		The values returned are nonzero if the character c falls
+**		into the tested class, and zero if not.
 */
 
 int	ft_isalnum(int c)
