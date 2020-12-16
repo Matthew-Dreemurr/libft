@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 14:37:18 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 14:44:15 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char			**ft_split(char const *s, char c)
 	char	**ret;
 	size_t	word;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	word = md_wordcount(s, c);
 //printf("-----[end wordcount word: %lu]------\n\n", word);
