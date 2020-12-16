@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 14:03:51 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 14:06:43 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ printf("-----[start md_wordcount]-----\n");
 	size_t	word;
 
 	word = 0;
-	while (*s++)
+	while (*s)
 	{
 		if (*s != c)
 		{
@@ -56,6 +56,8 @@ printf("-----[start md_wordcount]-----\n");
 				s++;
 			word++;
 		}
+		if (*s)
+			s++;
 printf("[while: *s:|%c| word: |%lu|]\n", *s, word);
 	}
 	return (word);
