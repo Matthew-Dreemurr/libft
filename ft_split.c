@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 11:09:09 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 11:13:21 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ printf("[while: *s:|%c| word: |%lu|]\n", *s, word);
 
 char			**ft_split(char const *s, char c)
 {
-printf("-----[start split]-----\n");
+printf("-----[start split s: |%s|, c: |%c|]-----\n", s, c);
 	char	**ret;
 	size_t	word;
 	
