@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 11:19:10 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 11:23:44 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ printf("-----[start md_cpy]-----\n");
 			{
 				while (s[i + len] != c && s[i + len])
 					len++;
-				ret[index] = ft_substr(s, i, len);
+				if (!(ret[index] = ft_substr(s, i, len)))
+					return (NULL);
 printf("----[while: ret:|%s|]----\n", ret[index]);
 				index++;
 			}
@@ -79,6 +80,12 @@ printf("-----[end wordcount word: %lu]------\n", word);
 	if (!(ret = malloc(sizeof(char *) * (word + 1))))
 		return (NULL);
 	ft_bzero(ret, word + 1);
-	ret = md_cpy(s, c, ret, word);
+	if (!(ret = md_cpy(s, c, ret, word)))
+	{
+		while (word)
+			free(ret[word--]);
+		free(ret);
+		return (NULL);
+	}
 	return (ret);
 }
