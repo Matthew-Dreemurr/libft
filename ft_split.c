@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 12:00:48 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 12:08:02 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char			**md_cpy(char const *s, char c, char **ret, size_t word)
 	i = 0;
 	len = 0;
 	index = 0;
-	while (index < word)
-	{
 		while (s[i] && index < word)
 		{
 			if (s[i] != c)
@@ -43,7 +41,6 @@ char			**md_cpy(char const *s, char c, char **ret, size_t word)
 			i++;
 			len = 0;
 		}
-	}
 	return (ret);
 }
 
