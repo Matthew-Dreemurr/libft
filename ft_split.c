@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 11:13:21 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 11:17:50 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,10 @@ char			**ft_split(char const *s, char c)
 printf("-----[start split s: |%s|, c: |%c|]-----\n", s, c);
 	char	**ret;
 	size_t	word;
-	
+	int							i;
+
+	i = 0;
+
 	if (!s || !c)
 		return (NULL);
 	word = md_wordcount(s, c);
@@ -81,5 +84,11 @@ printf("-----[end wordcount word: %lu]------\n", word);
 	ft_bzero(ret, word + 1);
 	ret = md_cpy(s, c, ret, word);
 	
+		while (ret[i])
+		{
+			printf("|%s|\n", ret[i]);
+			i++;
+		}
+
 	return (ret);
 }
