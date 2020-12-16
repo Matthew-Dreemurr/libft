@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 11:33:25 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 11:34:17 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char			**md_cpy(char const *s, char c, char **ret, size_t word)
 			i++;
 			len = 0;
 		}
-		ret[index] = '\0';
+		ret[index] = NULL;
 	}
 	return (ret);
 }
