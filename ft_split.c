@@ -6,13 +6,13 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 10:52:59 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 10:55:56 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // [TEST] //
 #include "libft.h"
-#include "main/test.h"
+//#include "main/test.h"
 // make split && ./a.out ___ABC_D__EF_G_H__ _
 
 char			**md_cpy(char const *s, char c, char **ret, size_t word)
