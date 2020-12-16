@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/16 11:05:57 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/16 11:09:09 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ printf("-----[start md_cpy]-----\n");
 	index = 0;
 	while (index < word)
 	{
-		while (s[i])
+		while (s[i] && index < word)
 		{
 			if (s[i] != c)
 			{
