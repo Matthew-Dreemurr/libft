@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/19 11:53:12 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/19 12:42:55 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,5 +37,5 @@ re: fclean all
 .PHONY: all, $(NAME), clean, fclean, re
 
 so:
-	$(CC) -fPIC -nostartfiles $(CFLAGS) $(SRC) 
-	gcc -shared -o libft.so $(OBJ)
+	$(CC) ${CFLAGS} -fPIC -nostartfiles $(CFLAGS) $(SRC) 
+	${CC} ${CFLAGS} -shared -o libft.so $(OBJ)
