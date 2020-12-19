@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 12:13:10 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/19 12:40:03 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/19 12:40:54 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*tmp;
 
 	tmp = NULL;
-	if (!lst)
-		return (NULL);
-	while (tmp->next)
-		tmp = lst->next;
-	return (tmp);
+	if (lst)
+	{
+		while (tmp->next)
+			tmp = lst->next;
+		return (tmp);
+	}
+	return (NULL);
 }
