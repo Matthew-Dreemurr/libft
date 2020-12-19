@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 12:52:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/19 13:06:44 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/19 15:30:58 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*tmp;
 
 	tmp = NULL;
-	if(!lst)
+	if (!lst)
 		return ;
 	tmp = (*lst);
 	while (*lst)

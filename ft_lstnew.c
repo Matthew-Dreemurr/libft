@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 11:44:28 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/19 11:54:32 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/19 15:31:34 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list *tmp;
-	
+
 	if (!(tmp = malloc(sizeof(t_list))))
 		return (NULL);
 	tmp->content = content;
