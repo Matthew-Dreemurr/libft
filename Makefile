@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/23 18:48:52 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/23 19:16:05 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ BONUS = ${SRC_BONUS:c=o}
 all: $(NAME)
 
 $(NAME): ${OBJ}
-	ar -rc $(NAME) ${OBJ}
+	ar -rcs $(NAME) ${OBJ}
 
 clean:
 	rm -f ${OBJ} ${BONUS}
@@ -79,7 +79,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${BONUS}
-	ar -rc $(NAME) ${BONUS}
+bonus: ${BONUS} $(NAME)
+	ar -rcs $(NAME) ${OBJ} ${BONUS}
 
 .PHONY: all, $(NAME), clean, fclean, re
