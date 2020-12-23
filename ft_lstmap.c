@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 14:24:27 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/20 14:18:57 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/23 18:00:59 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*ret;
-	t_list	*buff;
+	t_list		*ret;
+	
 	if (!lst)
+		return(NULL);
+	if (!(ret = ft_lstnew(f(lst->content))))
 		return (NULL);
 	if (lst->next)
-		buff = ft_lstmap(lst->content, f, del);
-
-	if (!(ret = ft_lstnew(f(lst->content))))
 	{
-		//* free *//
+		if (!(ret->next = ft_lstmap(lst->next, f, del)))
+		{
+			del(ret);
+			return (NULL);
+		}
 	}
-	if (lst->next)
-		ret->next = buff->next;
+	else
+		ret->next = NULL;
 	return (ret);
 }
