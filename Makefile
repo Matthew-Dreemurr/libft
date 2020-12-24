@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/23 19:16:05 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/24 13:24:25 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,27 +59,27 @@ ft_lstsize.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-OBJ = ${SRC:c=o}
-BONUS = ${SRC_BONUS:c=o}
+OBJ = $(SRC:c=o)
+BONUS = $(SRC_BONUS:c=o)
 
 
 %.o: %.c
-	${CC} ${CFLAGS} -I . -c $^ -o $@
+	$(CC) $(CFLAGS) -I . -c $^ -o $@
 
 all: $(NAME)
 
-$(NAME): ${OBJ}
-	ar -rcs $(NAME) ${OBJ}
+$(NAME): $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f ${OBJ} ${BONUS}
+	rm -f $(OBJ) $(BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-bonus: ${BONUS} $(NAME)
-	ar -rcs $(NAME) ${OBJ} ${BONUS}
+bonus: $(BONUS) $(NAME)
+	ar -rcs $(NAME) $(OBJ) $(BONUS)
 
 .PHONY: all, $(NAME), clean, fclean, re
