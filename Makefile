@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/24 14:37:53 by mhadad           ###   ########.fr        #
+#    Updated: 2020/12/24 14:51:54 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,6 @@ re: fclean all
 
 bonus: $(OBJ) $(BONUS)
 	ar -rcs $(NAME) $(OBJ) $(BONUS)
+	touch bonus
 
-.PHONY: all, clean, fclean, re, bonus
-
+.PHONY: all, clean, fclean, re
