@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 09:51:37 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 13:39:38 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/25 12:17:31 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*cpy_c;
+	char	*cpy_s;
 
-	cpy_c = (char *)s;
-	while (*cpy_c)
+	cpy_s = (char *)s;
+	while (*cpy_s)
 	{
-		if (*cpy_c == (char)c)
-			return (cpy_c);
-		cpy_c++;
+		if (*cpy_s == (char)c)
+			return (cpy_s);
+		cpy_s++;
 	}
 	if (c)
 		return (NULL);
 	else
-		return (cpy_c);
+		return (cpy_s);
 }
