@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 14:23:17 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 13:39:38 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/26 14:35:44 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*buff;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);

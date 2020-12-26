@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 09:22:19 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/15 13:39:38 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/26 14:30:23 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 
-	if (!s1)
+	if (!s1 || !s2)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
