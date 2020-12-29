@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:04:45 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/28 14:42:34 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/29 17:04:15 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	size_t		len;
 	size_t		start;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	len = ft_strlen(s1);
