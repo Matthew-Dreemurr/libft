@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 16:57:49 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/29 17:24:58 by mhadad           ###   ########.fr       */
+/*   Updated: 2020/12/29 17:28:08 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_strnstr(const char *big, const char *little, size_t len)
 		return (ret);
 	if (b_len < l_len || !b_len)
 		return (NULL);
-	while (*ret && l_len < len)
+	while (*ret && l_len <= len)
 	{
 		if (!ft_strncmp(big + i, little, l_len))
 			return (ret);
