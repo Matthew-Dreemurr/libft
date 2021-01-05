@@ -6,7 +6,7 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2020/12/24 14:51:54 by mhadad           ###   ########.fr        #
+#    Updated: 2021/01/05 15:56:45 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f bonus
 
 re: fclean all
 
