@@ -6,7 +6,7 @@
 /*   By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 14:39:30 by mhadad            #+#    #+#             */
-/*   Updated: 2020/12/25 12:32:36 by mhadad           ###   ########.fr       */
+/*   Updated: 2021/01/06 15:51:28 by mhadad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ char					**ft_split(char const *s, char c)
 	ft_bzero(ret, sizeof(char *) * (word + 1));
 	if (!(ret = md_cpy(s, c, ret, word)))
 	{
-		while (word--)
-			free(ret[word]);
+		while (*ret++)
+			free(*ret);
 		free(ret);
 		return (NULL);
 	}
