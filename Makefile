@@ -6,56 +6,56 @@
 #    By: mhadad <mhadad@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 11:51:51 by mhadad            #+#    #+#              #
-#    Updated: 2021/01/05 15:56:45 by mhadad           ###   ########.fr        #
+#    Updated: 2021/01/06 16:46:03 by mhadad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_atoi.c \
-ft_bzero.c \
-ft_calloc.c \
-ft_isalnum.c \
-ft_isalpha.c \
-ft_isascii.c \
-ft_isdigit.c \
-ft_isprint.c \
-ft_itoa.c \
-ft_memccpy.c \
-ft_memchr.c \
-ft_memcmp.c \
-ft_memcpy.c \
-ft_memmove.c \
-ft_memset.c \
-ft_putchar_fd.c \
-ft_putendl_fd.c \
-ft_putnbr_fd.c \
-ft_putstr_fd.c \
-ft_split.c \
-ft_strchr.c \
-ft_strdup.c \
-ft_strjoin.c \
-ft_strlcat.c \
-ft_strlcpy.c \
-ft_strlen.c \
-ft_strmapi.c \
-ft_strncmp.c \
-ft_strnstr.c \
-ft_strrchr.c \
-ft_strtrim.c \
-ft_substr.c \
-ft_tolower.c \
-ft_toupper.c
+SRC = src/ctype/ft_isalnum.c \
+src/ctype/ft_isalpha.c \
+src/ctype/ft_isascii.c \
+src/ctype/ft_isdigit.c \
+src/ctype/ft_isprint.c \
+src/stdio/ft_putchar_fd.c \
+src/stdio/ft_putendl_fd.c \
+src/stdio/ft_putnbr_fd.c \
+src/stdio/ft_putstr_fd.c \
+src/stdlib/ft_atoi.c \
+src/stdlib/ft_calloc.c \
+src/stdlib/ft_itoa.c \
+src/string/ft_bzero.c \
+src/string/ft_memccpy.c \
+src/string/ft_memchr.c \
+src/string/ft_memcmp.c \
+src/string/ft_memcpy.c \
+src/string/ft_memmove.c \
+src/string/ft_memset.c \
+src/string/ft_split.c \
+src/string/ft_strchr.c \
+src/string/ft_strdup.c \
+src/string/ft_strjoin.c \
+src/string/ft_strlcat.c \
+src/string/ft_strlcpy.c \
+src/string/ft_strlen.c \
+src/string/ft_strmapi.c \
+src/string/ft_strncmp.c \
+src/string/ft_strnstr.c \
+src/string/ft_strrchr.c \
+src/string/ft_strtrim.c \
+src/string/ft_substr.c \
+src/string/ft_tolower.c \
+src/string/ft_toupper.c \
 
-SRC_BONUS = ft_lstadd_back.c \
-ft_lstadd_front.c \
-ft_lstclear.c \
-ft_lstdelone.c \
-ft_lstiter.c \
-ft_lstlast.c \
-ft_lstmap.c \
-ft_lstnew.c \
-ft_lstsize.c
+SRC_BONUS = src/chained_list/ft_lstadd_back.c \
+src/chained_list/ft_lstadd_front.c \
+src/chained_list/ft_lstclear.c \
+src/chained_list/ft_lstdelone.c \
+src/chained_list/ft_lstiter.c \
+src/chained_list/ft_lstlast.c \
+src/chained_list/ft_lstmap.c \
+src/chained_list/ft_lstnew.c \
+src/chained_list/ft_lstsize.c \
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -64,7 +64,7 @@ BONUS = $(SRC_BONUS:c=o)
 
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I . -c $^ -o $@
+	$(CC) $(CFLAGS) -I include -c $^ -o $@
 
 all: $(NAME)
 
